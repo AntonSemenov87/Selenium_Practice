@@ -19,6 +19,10 @@ public class ZeroBank_Tasks {
             System.out.println("Header verification FAILED!!!");
         }
 
+        String hrefForForgotPassword = driver.findElement(By.partialLinkText("Forgot")).getAttribute("href");
+        System.out.println(hrefForForgotPassword);
+
+
 
 
         Thread.sleep(3000);
