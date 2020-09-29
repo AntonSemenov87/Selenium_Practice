@@ -21,7 +21,8 @@ public class LocatorsIntro {
         // BY PARTIAL LINKED TEXT
         driver.get("http://www.etsy.com");
         driver.findElement(By.partialLinkText(" Finds")).click();
-
+        String linkText = driver.findElement(By.id("catnav-primary-link-10923")).getText();
+        System.out.println(linkText);
 
 
 
