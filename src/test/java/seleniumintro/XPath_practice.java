@@ -7,11 +7,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class XPath_practice {
     public static void main(String[] args) {
         WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
         driver.get("http://practice.cybertekschool.com/add_remove_elements/");
+
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         WebElement addElementButton = driver.findElement(By.xpath("//button[.='Add Element']"));
         addElementButton.click();
