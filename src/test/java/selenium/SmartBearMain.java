@@ -24,7 +24,15 @@ public class SmartBearMain {
             }
         }
         System.out.println(givenName + " was not found - FAIL");
+    }
 
+    public static void printNamesAndCities(WebDriver driver) {
+        List<WebElement> allNames = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']/tbody/tr/td[2]"));
+        List<WebElement> allCities = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']/tbody/tr/td[7]"));
+
+        for (int i = 0; i < allNames.size(); i++) {
+            System.out.println(allNames.get(i).getText() + " <--name, city --> " + allCities.get(i).getText());
+        }
     }
 
 }

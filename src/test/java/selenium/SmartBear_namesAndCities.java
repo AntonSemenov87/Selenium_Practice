@@ -1,14 +1,10 @@
 package selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.List;
-
-public class SmartBear_verifyOrder {
+public class SmartBear_namesAndCities {
     public static void main(String[] args) {
 
         WebDriverManager.firefoxdriver().setup();
@@ -17,11 +13,7 @@ public class SmartBear_verifyOrder {
 
         SmartBearMain.login(driver);
 
-        SmartBearMain.verifyOrder(driver, "Bob Feather");
-        SmartBearMain.verifyOrder(driver, "Anton Semenov");
-
-
+        SmartBearMain.printNamesAndCities(driver);
 
     }
-
 }
