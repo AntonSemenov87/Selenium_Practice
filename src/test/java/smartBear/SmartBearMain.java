@@ -1,4 +1,4 @@
-package selenium;
+package smartBear;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -34,5 +34,6 @@ public class SmartBearMain {
             System.out.println(allNames.get(i).getText() + " <--name, city --> " + allCities.get(i).getText());
         }
     }
+
 
 }

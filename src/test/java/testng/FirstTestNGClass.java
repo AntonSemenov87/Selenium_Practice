@@ -21,7 +21,8 @@ public class FirstTestNGClass {
     @Test
     public void secondTest() {
         System.out.println("Second test is running...");
-        Assert.assertTrue("sentence".contains("e"), "Sentence doesn't contain given letter!");
+        String letter = "b";
+        Assert.assertTrue("sentence".contains(letter), "Sentence doesn't contain " + letter + " letter!");
     }
 
     @BeforeMethod
