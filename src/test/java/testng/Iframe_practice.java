@@ -24,7 +24,6 @@ public class Iframe_practice {
     public void iframe(){
         // Option 1 - by index
         //driver.switchTo().frame(0);
-        //WebElement paragraph = driver.findElement(By.xpath("//p"));
 
         // Option 2
         // look for iframe by id
@@ -36,7 +35,8 @@ public class Iframe_practice {
         driver.switchTo().parentFrame();
         // OR
         // driver.switchTo().defaultContent();
-        Assert.assertTrue();
+        WebElement header = driver.findElement(By.xpath("//h3"));
+        Assert.assertTrue(header.isDisplayed());
 
     }
 
