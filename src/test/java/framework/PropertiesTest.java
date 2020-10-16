@@ -1,9 +1,13 @@
 package framework;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
+import utilities.Config;
+import utilities.VytrackUtils;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -25,6 +29,19 @@ public class PropertiesTest {
 
         // 5) Read values using getProperty() method
         System.out.println(properties.getProperty("name"));
+        System.out.println(properties.getProperty("username"));
+        System.out.println(properties.getProperty("password"));
+    }
+
+    @Test
+    public void testWithUtil() {
+        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new FirefoxDriver();
+
+        driver.get(Config.getProperty("vytrackURL"));
+
+        VytrackUtils.login(driver, Config.getProperty("storemanagerUsername"), Config.getProperty("storemanagerPassword"));
+
 
     }
 
