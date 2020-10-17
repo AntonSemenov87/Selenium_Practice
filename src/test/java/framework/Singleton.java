@@ -2,6 +2,11 @@ package framework;
 
 public class Singleton {
 
+    // private constructor so we cannot make an Object of this class
+    private Singleton(){
+
+    }
+
     private static String word;
 
     public static String getWord(){
