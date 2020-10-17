@@ -33,6 +33,7 @@ public class HardAssertions {
         softAssert.assertTrue(false);
 
         System.out.println("test3 ending");
+        softAssert.assertAll();
 
     }
 
