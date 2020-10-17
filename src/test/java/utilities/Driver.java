@@ -18,7 +18,6 @@ public class Driver {
 
     public static WebDriver getDriver(){
         if (driver == null) {
-
             switch (Config.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
@@ -34,6 +33,13 @@ public class Driver {
             driver.manage().window().maximize();
         }
         return driver;
+    }
+
+    public static void closeDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
     }
 
 }
